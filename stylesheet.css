@@ -1,0 +1,159 @@
+body {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topBar {
+    margin-left: 200px;
+    background-color: #aaaaaa;
+    color: #333333;
+    width: calc( 100% - 200px );
+    height:100px;
+    padding-left: 10px;
+}
+.topBar h1 {
+    padding-top: 8px;
+    font-size: 20px;
+    color: #ffef44;
+    text-shadow: 1px 1px #666666;
+}
+.topMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topMenu li {
+    float: left;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.searchMenu #topSearch, #topSubmit {
+    display: inline-block;
+    padding: 8px;
+    float: left;
+    border: none;
+    margin: 1px;
+}
+
+.themesMenu {
+    position: relative;
+    display: inline-block;
+}
+
+.themesButton {
+    background-color: #dddddd;
+    padding: 8px;
+    border: none;
+    position: relative;
+}
+
+.themesList {
+    display: none;
+    position: absolute;
+    background-color: #dddddd;
+    box-shadow: 0px 4px 8px 0px #aaaaaa;
+    z-index: 1;
+    width: 100%;
+}
+
+.themesList .themesCheckbox {
+    padding: 6px 8px;
+    color: #333333;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+
+.themesList .themesCheckbox:hover {
+    background-color: #cccccc;
+}
+
+.themesMenu:hover .themesList {
+    display: block;
+}
+
+.sideNav {
+    overflow: auto;
+    height: 100%;
+    width: 200px;
+    background-color: #272727;
+    position: fixed;
+    color: #aaaaaa;
+    z-index: 1;
+}
+.sideNav ul {
+    list-style-type: none;
+}
+.sideNav li a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+.sideNav li a:hover {
+    color: white;
+}
+.sideNav img {
+    margin: auto;
+    display: block;
+}
+.border::before {
+    content:"";
+    position:relative;
+    left: 20px;
+    padding-right: 160px;
+    border-bottom: thin solid #333333;
+}
+.account p {
+    padding-left: 10px;
+    color: #cccccc;
+}
+
+.section {
+    float:right;
+    height: 100%;
+    width: 150px;
+}
+
+.main {
+    margin-left: 200px;
+    margin-right: 150px;
+    padding: 0 10px;
+    position: relative;
+    overflow:auto;
+}
+
+.pageConnexion {
+    width: 400px;
+    margin-left: 300px;
+    margin-top:50px;
+}
+
+.connexion-inscription {
+    background-color: #cccccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.connexion-inscription label {
+    display: inline-block;
+    width: 150px;
+    font-size:12px;
+}
+
+.connexion-inscription #connexionSubmit, #inscriptionSubmit {
+    display: inline-block;
+    padding: 8px;
+    border: none;
+    margin-top: 20px;
+}
+
+.footer {
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 200px;
+    padding-left:10px;
+    bottom:0;
+    position: absolute;
+}
