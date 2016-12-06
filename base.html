@@ -1,3 +1,5 @@
+<!-- Structure de base pour toutes les pages du site ; à inclure dans chaque page -->
+
 <!DOCTYPE html>
 <html>
 
@@ -18,11 +20,11 @@
     <!-- liens -->
     <ul>
         <!-- Lien vers accueil -->
-        <li><a href="base.php">Parcourir</a></li>
+        <li><a href="accueil.php">Parcourir</a></li>
         <!-- Lien vers recommandations -->
         <li><a href="#recommandations">Recommandations</a></li>
         <!-- Lien vers connexion -->
-        <li><a href="register.html" id=#connexion>Connexion</a></li>
+        <li><a href="register.php" id=#connexion>Connexion</a></li>
     </ul>
 
     <!-- espace "mon compte" : à faire apparaitre en JS ou PHP si l'utilisateur est connecté -->
@@ -84,7 +86,6 @@
 
 <!-- la barre pour le choix des saisons -->
 <div class="section">
-    <p id="test">test section</p>
 </div>
 
 <!-- Zone principale -->
@@ -112,18 +113,6 @@
 
 <!-- Script JS pour récuperer les données des séries -->
 <script type="text/javascript" src="series.js"></script>
-
-<!-- script php pour l'affichage des résultats de la recherche -->
-<?php
-$url = "series.php";
-
-if (isset($_GET["search"])) {
-    $url=$url."?search=".$_GET["search"];
-}
-
-echo "<script>loadJSONDoc('$url')</script>";
-
-?>
 
 </body>
 

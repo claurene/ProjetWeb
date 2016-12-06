@@ -18,11 +18,11 @@
     <!-- liens -->
     <ul>
         <!-- Lien vers accueil -->
-        <li><a href="base.php">Parcourir</a></li>
+        <li><a href="base.html">Parcourir</a></li>
         <!-- Lien vers recommandations -->
         <li><a href="#recommandations">Recommandations</a></li>
         <!-- Lien vers connexion -->
-        <li><a href="register.html" id=#connexion>Connexion</a></li>
+        <li><a href="register.php" id=#connexion>Connexion</a></li>
     </ul>
 
     <!-- espace "mon compte" : à faire apparaitre en JS ou PHP si l'utilisateur est connecté -->
