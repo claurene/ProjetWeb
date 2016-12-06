@@ -18,7 +18,7 @@
     <!-- liens -->
     <ul>
         <!-- Lien vers accueil -->
-        <li><a href="base.html">Parcourir</a></li>
+        <li><a href="base.php">Parcourir</a></li>
         <!-- Lien vers recommandations -->
         <li><a href="#recommandations">Recommandations</a></li>
         <!-- Lien vers connexion -->
@@ -48,8 +48,8 @@
         <li>
             <div class="searchMenu">
                 <form>
-                    <input id="search" type="text" placeholder="Rechercher une série...">
-                    <input id="submit" type="submit" value="Rechercher">
+                    <input id="searchInput" type="text" name="search" placeholder="Rechercher une série...">
+                    <input id="searchButton" type="submit" value="Rechercher">
                 </form>
             </div>
         </li>
@@ -84,8 +84,7 @@
 
 <!-- la barre pour le choix des saisons -->
 <div class="section">
-
-
+    <p id="test">test section</p>
 </div>
 
 <!-- Zone principale -->
@@ -113,6 +112,18 @@
 
 <!-- Script JS pour récuperer les données des séries -->
 <script type="text/javascript" src="series.js"></script>
+
+<!-- script php pour l'affichage des résultats de la recherche -->
+<?php
+$url = "series.php";
+
+if (isset($_GET["search"])) {
+    $url=$url."?search=".$_GET["search"];
+}
+
+echo "<script>loadJSONDoc('$url')</script>";
+
+?>
 
 </body>
 

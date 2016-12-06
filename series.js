@@ -1,8 +1,5 @@
-/*Adresse où trouver les données*/
-var url = "series.php";
-
 /*Fonction chargeant les données JSON*/
-function loadJSONDoc(){
+function loadJSONDoc(url){
     // Create XMLHttpRequest object (Check browser)
     var xmlhttp;
     if (window.XMLHttpRequest){
@@ -17,12 +14,12 @@ function loadJSONDoc(){
     xmlhttp.onreadystatechange = function(){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
             // Change div content to the text content of the response
-            //document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
             var jsonObject = JSON.parse(xmlhttp.responseText);
 
             makeGrid(jsonObject);
         }
     }
+
     // Initialize request
     xmlhttp.open("GET", url, true);
     // Send
@@ -48,6 +45,7 @@ function makeGrid(content){
 
             var divImg = document.createElement("div");
             divImg.className = "imageCell";
+            divImg.id = series[j].id;
             var img = document.createElement("img");
             var imgPath = "https://image.tmdb.org/t/p/w154"+series[j].poster_path;
             img.setAttribute('src', imgPath);
@@ -65,5 +63,3 @@ function makeGrid(content){
     }
 
 }
-
-loadJSONDoc();
