@@ -157,3 +157,21 @@ body {
     bottom:0;
     position: absolute;
 }
+
+#nameSerie {
+
+}
+
+#imageInfos {
+    float: left;
+    padding-right: 10px;
+}
+
+#listInfos li {
+    list-style-type: none;
+    text-align: justify;
+}
+
+#listInfos li span {
+    font-weight: bold;
+}

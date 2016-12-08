@@ -107,14 +107,18 @@ function buildInfos(content){
     img.setAttribute('alt', 'poster');
     divImg.appendChild(img);
 
-    /*Création des informations de la série (on peut en rajouter plus tard)*/
-    var liName = document.createElement('li');
+    /*Ajout du titre de la série*/
+    var h2Name = document.getElementById('nameSerie');
     var name = document.createTextNode(series[0].name);
-    liName.appendChild(name);
-    ulInfos.appendChild(liName);
+    h2Name.appendChild(name);
 
+    /*Création des informations de la série (on peut en rajouter plus tard)*/
     var liOverview = document.createElement('li');
+    var span = document.createElement('span');
+    var spanText = document.createTextNode('Overview: ');
+    span.appendChild(spanText);
     var overview = document.createTextNode(series[0].overview);
+    liOverview.appendChild(span);
     liOverview.appendChild(overview);
     ulInfos.appendChild(liOverview);
 
