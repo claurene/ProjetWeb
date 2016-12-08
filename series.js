@@ -130,3 +130,10 @@ function buildInfos(content){
 */
 
 }
+
+/*Fonction inserant une div dans une autre div en fonction de leur id (inutilisée pour le moment)*/
+function insertInto(divId,insert){
+    var div = document.getElementById('divId');
+    var node = document.createTextNode(insert);
+    div.appendChild(node);
+}
