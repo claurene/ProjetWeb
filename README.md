@@ -20,6 +20,8 @@ series.php : script PHP récupérant les données de la base de données requise
 
 accueil.php : Page d'accueil du site et page affichant les résultats de la recherche de séries.
 
-register.php : Page de connexion/inscription. //TODO : script de connexion/inscription (cf. TDs)
+infos.php : Page affichant les informations sur une série quand on clique sur l'image de celle ci dans les pages d'accueil ou de recomandation.
+
+register.php : Page de connexion/inscription. //TODO : script de connexion/inscription (cf. TDs) //TODO: modifier la page (elle n'inclut pas la structure de base)
 
 
