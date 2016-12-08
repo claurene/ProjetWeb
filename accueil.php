@@ -9,4 +9,4 @@ if (isset($_GET["search"])) {
     $url=$url."?search=".$_GET["search"];
 }
 
-echo "<script>loadJSONDoc('$url')</script>";
+echo "<script>loadJSONDoc('$url','grid')</script>";
