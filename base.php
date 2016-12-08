@@ -24,7 +24,7 @@
         <!-- Lien vers recommandations -->
         <li><a href="#recommandations">Recommandations</a></li>
         <!-- Lien vers connexion -->
-        <li><a href="register.php" id=#connexion>Connexion</a></li>
+        <li><a href="register.php" id=connexion>Connexion</a></li>
     </ul>
 
     <!-- espace "mon compte" : à faire apparaitre en JS ou PHP si l'utilisateur est connecté -->
@@ -91,6 +91,16 @@
 <!-- Zone principale -->
 <div class="main" id="main">
 
+    <!-- Choix de la page à afficher -->
+    <?php
+        //On récupère l'url de la page
+        $page_url=basename($_SERVER['REQUEST_URI']);
+
+        if ($page_url == "register.php"){
+            loadRegister();
+        }
+    ?>
+
     <!-- Grille des séries -->
     <table id="grid">
     <!-- 1ère ligne ; à répeter autant de fois qu'on veut de lignes -->
@@ -130,3 +140,4 @@
 </body>
 
 </html>
+

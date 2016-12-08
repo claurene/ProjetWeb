@@ -10,7 +10,7 @@ Sujet/ : répertoire contenant le fichier de répartition des tâches ainsi que 
 
 ul_icon.png : icône université de Lorraine (en haut à gauche du site web)
 
-base.html : Structure de base à inclure (via include 'base.html') dans toutes les pages du site ; elle contient les div construisant les différentes sections du site, ainsi que le lien vers le script de récupération des données.
+base.php : Structure de base à inclure (via include 'base.php') dans toutes les pages du site ; elle contient les div construisant les différentes sections du site, ainsi que le lien vers le script de récupération des données.
 
 stylesheet.css : Feuille de style du site configurant l'affichage de tous les objets et leur disposition.
 
@@ -22,6 +22,5 @@ accueil.php : Page d'accueil du site et page affichant les résultats de la rech
 
 infos.php : Page affichant les informations sur une série quand on clique sur l'image de celle ci dans les pages d'accueil ou de recomandation.
 
-register.php : Page de connexion/inscription. //TODO : script de connexion/inscription (cf. TDs) //TODO: modifier la page (elle n'inclut pas la structure de base)
-
+register.php : Page de connexion/inscription. //TODO : script de connexion/inscription (cf. TDs)
 

@@ -1,6 +1,6 @@
 <?php
 
-include "base.html";
+include "base.php";
 
 /*script php pour l'affichage des résultats de la recherche*/
 $url = "series.php";
