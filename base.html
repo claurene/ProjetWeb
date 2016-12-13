@@ -8,6 +8,7 @@
 <!-- insérer liens vers feuille de style, script JS etc. -->
 <!-- feuille de style css pour toutes les pages -->
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -90,16 +91,6 @@
 
 <!-- Zone principale -->
 <div class="main" id="main">
-
-    <!-- Choix de la page à afficher -->
-    <?php
-        //On récupère l'url de la page
-        $page_url=basename($_SERVER['REQUEST_URI']);
-
-        if ($page_url == "register.php"){
-            loadRegister();
-        }
-    ?>
 
     <!-- Grille des séries -->
     <table id="grid">
