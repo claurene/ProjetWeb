@@ -4,125 +4,85 @@
 <html>
 
 <head>
-<title>Structure</title>
-<!-- insérer liens vers feuille de style, script JS etc. -->
-<!-- feuille de style css pour toutes les pages -->
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Structure</title>
+    <!-- JQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Sidebar (Bootstrap) CSS -->
+    <link href="simple-sidebar.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <style>
+        #main {
+            margin-top: 60px;
+        }
+    </style>
 </head>
 
 <body>
 
 <!-- Barre de navigation noire -->
-<div class="sideNav">
-    <!-- logo université de Lorraine -->
-    <img src="ul_icon.png" alt="logo" style="width:75px;height:auto;">
-
-    <!-- liens -->
-    <ul>
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <!-- logo université de Lorraine -->
+            <img src="ul_icon.png" alt="logo" style="width:75px;height:auto;">
+        </li>
+        <!-- Liens -->
         <!-- Lien vers accueil -->
-        <li><a href="accueil.php">Parcourir</a></li>
+        <li>
+            <a href="accueil.php">Parcourir</a>
+        </li>
         <!-- Lien vers recommandations -->
-        <li><a href="#recommandations">Recommandations</a></li>
-        <!-- Lien vers connexion -->
-        <li><a href="register.php" id=connexion>Connexion</a></li>
-    </ul>
-
-    <!-- espace "mon compte" : à faire apparaitre en JS ou PHP si l'utilisateur est connecté -->
-    <div class="account border">
-        <p>Mon compte :</p>
-        <ul>
-            <!-- lien vers page utilisateur -->
-            <li><a href="#compte">#username</a></li>
-            <!-- lien vers séries visionnées -->
-            <li><a href="#visionnees">Séries déjà visionnées</a></li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- Barre de recherche grise -->
-<div class="topBar">
-    <h1>Recherche de séries :</h1>
-
-    <!-- menus de la barre : -->
-    <ul class="topMenu">
-        <!-- Rechercher une série ; ajouter method et action dans la balise form lors de la création du script de recherche -->
         <li>
-            <div class="searchMenu">
-                <form method="get" action="accueil.php">
-                    <input id="searchInput" type="text" name="search" placeholder="Rechercher une série...">
-                    <input id="searchButton" type="submit" value="Rechercher">
-                </form>
-            </div>
+            <a href="#recommandations">Recommandations</a>
         </li>
-
-        <!-- tri de séries par thème -->
+        <!-- Lien vers connexion : à changer en deconnexion si l'utilisateur est connecté -->
         <li>
-            <div class="themesMenu">
-                <button class="themesButton">Recherche par theme ↴</button>
-                    <div class="themesList">
-                    <!--
-                        <a href="#">#Theme1</a>
-                        <a href="#">#Theme2</a>
-                        <a href="#">etc.</a>
-                    -->
-                        <form>
-                           <label class="themesCheckbox">
-                               <input type="checkbox" name="theme" value="theme1">theme 1
-                           </label>
-                            <label class="themesCheckbox">
-                                <input type="checkbox" name="theme" value="theme2">theme 2
-                            </label>
-                            <label class="themesCheckbox">
-                                <input type="checkbox" name="theme" value="theme3">etc
-                            </label>
-                        </form>
-                    </div>
-            </div>
+            <a href="register.php" id=connexion>Connexion</a>
+        </li>
+        <!-- espace "mon compte" : à faire apparaitre en JS ou PHP si l'utilisateur est connecté -->
+        <li>
+            <a href="#compte">#Username</a>
         </li>
     </ul>
-
 </div>
 
-<!-- la barre pour le choix des saisons -->
-<div class="section">
-</div>
-
-<!-- Zone principale -->
-<div class="main" id="main">
-
-    <!-- Grille des séries -->
-    <table id="grid">
-    <!-- 1ère ligne ; à répeter autant de fois qu'on veut de lignes -->
-    <tr>
-        <!-- série n°1 ; à répeter autant de fois qu'on veut de séries par ligne -->
-        <td>
-            <div class="imageCell"><!-- image --></div>
-            <div class="infosCell"><!-- informations sur la série -->
-                <!-- rajouter ul, li  etc. pour différentes infos -->
+<!-- Barre de recherche -->
+<nav class="navbar navbar-default navbar-fixed-top col-sm-offset-2">
+    <div class="container-fluid">
+        <!-- Titre -->
+        <div class="navbar-header">
+            <p class="navbar-text">Rechercher une série :</p>
+        </div>
+        <!-- Zone de recherche -->
+        <form class="navbar-form navbar-left" method="get" action="accueil.php">
+            <div class="form-group">
+                <input id="searchInput" type="text" name="search" class="form-control" placeholder="Rechercher une série...">
             </div>
-        </td>
-    </tr>
-
-    </table>
-
-    <!-- Informations sur une série -->
-    <div id="serieInfos">
-        <h2 id="nameSerie"><!-- titre de la série --></h2>
-        <div id="imageInfos"><!-- image --></div>
-        <div id="InfosInfos"><!-- informations sur la série -->
-            <ul id="listInfos">
-                <!-- chaque information est dans un li -->
+            <button id="searchButton" type="submit" class="btn btn-default">Rechercher</button>
+        </form>
+        <!-- Bouton pour recherche par thèmes -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Recherche par thème <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Theme 1</a></li>
+                <li><a href="#">Theme 2</a></li>
+                <li><a href="#">...</a></li>
             </ul>
         </div>
     </div>
+</nav>
 
-</div>
-
-<div class="footer">
-    <!-- à remplir (noms, etc.) -->
-    <p></p>
+<!-- Section principale -->
+<div id="main">
+    <!-- Grille des séries ; se remplie grace à un script JQuery -->
+    <div id="grid" class="container-fluid col-sm-offset-2">
+    </div>
 </div>
 
 <!-- Script JS pour récuperer les données des séries -->

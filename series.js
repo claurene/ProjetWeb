@@ -1,31 +1,37 @@
 //Fonction chargeant les données JSON (pour la grille)
 function loadGrid(url) {
     $.getJSON(url, function (result) {
-        var table = $('#grid');
+        var grid = $('#grid');
         var series = result['series'];
         //Boucle pour les lignes
         for (var i = 0; i < series.length; i+=4){
             //Boucle pour les séries sur une ligne
-            var tr = $('<tr/>');
-            tr.appendTo(table);
+            var row = $('<div/>', {
+                class: "row"
+            });
+            row.appendTo(grid);
             for (var j = i; j < i+4; j++){
                 //Série n°j
-                var td = $('<td/>');
-                td.appendTo(tr);
+                var div_serie = $('<div/>',{
+                    class:"col-md-3 portfolio-item"
+                });
+                div_serie.appendTo(row);
 
                 //Création de la zone d'affichage de l'image de la série et du lien vers la page infos
                 $('<img/>', {
                     id: series[j]['id'],
+                    class: "img-responsive",
                     src: "https://image.tmdb.org/t/p/w154"+series[j]['poster_path'],
                     alt: 'poster'
                 }).bind('click', function() {
                     document.location.href = "infos.php?serie="+$(this).attr('id');
-                }).appendTo(td);
+                }).appendTo(div_serie);
 
                 //Création de la zone informations sous l'image de la série
                 //TODO: à complèter avec d'autres informations
-                td.append(
-                    $('<div/>', {text: series[j]['name']})
+                div_serie.append(
+                    $('<h3/>', {text: series[j]['name']}),
+                    $('<p/>', {text: 'infos'})
                 );
             }
         }
@@ -36,24 +42,61 @@ function loadInfos(url) {
     $.getJSON(url, function (result) {
         var series = result['series'];
 
-        //On affiche l'image de la série
-        $('<img/>',{
-            src: "https://image.tmdb.org/t/p/w342"+series[0]['poster_path'],
-            alt: 'poster'
-        }).appendTo($('#imageInfos'));
+        var container = $('<div/>', {
+            class: "container col-md-offset-2"
+        });
+        container.appendTo($('#main'));
 
-        //Ajout du titre de la série
-        $('#nameSerie').append(series[0]['name']);
+        //Titre de la série
+        var titre = '<div class="row">' +
+            '<div class="col-md-12">' +
+            '<h1 class="page-header">' + series[0]['name'] + '</h1>' +
+            '</div>' +
+            '</div>';
+        container.append(titre);
 
-        //Ajout d'autres infos
-        //TODO: à complèter avec d'autres infos
-        $('#listInfos').append(
-            $('<li/>').append(
-                $('<span/>',{text: 'Overview: '}),
-                series[0]['overview']
-            )
+        //Informations sur la série
+        var infos = $('<div/>', {
+            class: "row"
+        });
+        infos.appendTo(container);
+
+        //Image de la série
+        var image = $('<div/>', {
+            class: "col-md-4"
+        });
+        image.append(
+            $('<img/>', {
+                class: 'img-responsive',
+                src: "https://image.tmdb.org/t/p/w342" + series[0]['poster_path'],
+                alt: 'poster'
+            }),
+            $('<p/>') //Paragraphe vide pour espace légèrement avec le bas de l'écran
         );
-    });
+        image.appendTo(infos);
+
+        //Description de la série
+        var description = $('<div/>', {
+            class: "col-md-7"
+        });
+        description.append(
+            $('<h3/>', {text: 'Description'}),
+            $('<p/>', {text: series[0]['overview']}),
+            $('<h3/>', {text: 'Autres informations'})
+        );
+        description.appendTo(infos);
+
+        //Autres informations sur la série
+        var ul = $('<ul/>');
+        ul.append(
+            $('<li/>', {text: 'Number of seasons: ' + series[0]['number_of_seasons']}),
+            $('<li/>', {text: 'Number of episodes: ' + series[0]['number_of_episodes']}),
+            $('<li/>', {text: 'Popularity: ' + series[0]['popularity']}),
+            $('<li/>', {text: 'First air date: ' + series[0]['first_air_date']}),
+            $('<li/>', {text: 'Last air date: ' + series[0]['last_air_date']})
+        );
+        ul.appendTo(description);
+    })
 }
 
 function loadRegister(){
