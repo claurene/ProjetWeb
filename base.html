@@ -18,6 +18,11 @@
         #main {
             margin-top: 60px;
         }
+        .scrollable-menu {
+            height: auto;
+            max-height: 200px;
+            overflow-x: hidden;
+        }
     </style>
 </head>
 
@@ -69,10 +74,8 @@
             <button type="button" class="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Recherche par thème <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Theme 1</a></li>
-                <li><a href="#">Theme 2</a></li>
-                <li><a href="#">...</a></li>
+            <ul class="dropdown-menu scrollable-menu" id="themes-menu">
+                <!-- Liste des themes -->
             </ul>
         </div>
     </div>

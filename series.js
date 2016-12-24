@@ -1,3 +1,21 @@
+//Menu de tri par thème
+$(document).ready(function() {
+    $.getJSON('themes.php', function(result) {
+        var menu = $('#themes-menu');
+        var themes = result['themes'];
+        //On affiche tous les themes
+        for (var i = 0; i < themes.length; i+=1){
+            var li = $('<li/>');
+            li.append($('<a/>',{
+                href: 'accueil.php?sort='+themes[i]['id'],
+                text: themes[i]['name']
+            }));
+            li.appendTo(menu);
+        }
+    })
+});
+
+
 //Fonction chargeant les données JSON (pour la grille)
 function loadGrid(url) {
     $.getJSON(url, function (result) {
@@ -102,3 +120,4 @@ function loadInfos(url) {
 function loadRegister(){
     $('#main').load('register.html');
 }
+

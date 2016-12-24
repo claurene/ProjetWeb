@@ -9,8 +9,13 @@ $SQL='SELECT * FROM series';
 if (isset($_GET["search"])) {
     $SQL=$SQL." WHERE LOWER(name) LIKE '%".$_GET["search"]."%'";
 }
+/*Infos sur une série*/
 else if (isset($_GET["serie"])) {
     $SQL=$SQL." WHERE id=".$_GET["serie"];
+}
+/*Recherche par thème*/
+else if (isset($_GET["sort"])) {
+    $SQL="SELECT * FROM series INNER JOIN (SELECT series_id FROM seriesgenres WHERE genre_id=".$_GET["sort"].") R ON series_id=id";
 }
 
 /*Accès à la base de donnée, mise en place des données des séries au format JSON*/
