@@ -39,7 +39,7 @@ function loadGrid(url) {
                 $('<img/>', {
                     id: series[j]['id'],
                     class: "img-responsive",
-                    src: "https://image.tmdb.org/t/p/w154"+series[j]['poster_path'],
+                    src: "https://image.tmdb.org/t/p/w185"+series[j]['poster_path'],
                     alt: 'poster'
                 }).bind('click', function() {
                     document.location.href = "infos.php?serie="+$(this).attr('id');
@@ -114,6 +114,30 @@ function loadInfos(url) {
             $('<li/>', {text: 'Last air date: ' + series[0]['last_air_date']})
         );
         ul.appendTo(description);
+
+        //Lien vers saisons de la série :
+        description.append(
+            $('<h3/>', {text: 'Liste des épisodes par saison'})
+        );
+
+        var seasons=$('<div/>',{
+            class:'btn-group',
+            role:'group'
+        });
+        for (var i = 1; i <= series[0]['number_of_seasons']; i++) {
+            seasons.append(
+                $('<a/>', {
+                    class: "btn btn-info",
+                    href: 'episodes.php?serie=' + series[0]['id'] + '&season='+i,
+                    role: 'button',
+                    text: 'Saison '+i
+                })
+            );
+        }
+        seasons.appendTo(description);
+
+        //Paragraphe vide pour espace légèrement avec le bas de l'écran
+        description.append($('<p/>'));
     })
 }
 
@@ -123,5 +147,43 @@ function loadUser(url) {
         var user = result['series'];
         $('.username').html(user[0]['name']);
         $('.email').html(user[0]['email']);
+    });
+}
+
+/*Fonction affichant les épisodes d'une série, par saison*/
+function loadEpisodes(url){
+    $.getJSON(url, function (result) {
+        var grid = $('#grid');
+        var episodes = result['episodes'];
+        //Boucle pour les lignes
+        for (var i = 0; i < episodes.length; i+=4){
+            //Boucle pour les épisodes sur une ligne
+            var row = $('<div/>', {
+                class: "row"
+            });
+            row.appendTo(grid);
+            for (var j = i; j < i+4; j++){
+                //Épisode n°j
+                var div_episode = $('<div/>',{
+                    class:"col-md-3 portfolio-item"
+                });
+                div_episode.appendTo(row);
+
+                //Création de la zone d'affichage de l'image de l'épisode
+                $('<img/>', {
+                    class: "img-responsive",
+                    src: "https://image.tmdb.org/t/p/w300"+episodes[j]['still_path'],
+                    alt: 'poster'
+                }).appendTo(div_episode);
+
+                //Création de la zone informations sous l'épisode
+                div_episode.append(
+                    $('<h3/>', {text: episodes[j]['name']}),
+                    $('<p/>', {text: 'Episode '+episodes[j]['number']}),
+                    $('<p/>', {text: episodes[j]['overview']})
+                );
+            }
+        }
+
     });
 }
