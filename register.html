@@ -1,29 +1,31 @@
-<div class="container col-md-3 col-md-offset-5">
-    <!-- Zone de connexion -->
-    <div class="row">
-        <form method='post' action='#connexion'>
-            <h3>Connexion</h3>
-            <label for='identifier1' class="sr-only">Identifiant</label>
-            <input type='text' id='identifier1' class="form-control" placeholder="Identifiant" required autofocus>
-            <label for="password1" class="sr-only">Mot de passe</label>
-            <input type="password" id="password1" class="form-control" placeholder="Mot de passe" required>
-            <button class="btn btn-lg btn-info btn-block" type="submit">Se connecter</button>
-        </form>
-    </div>
+<div id="grid" class="container-fluid col-sm-offset-2">
+    <div class="container col-md-3 col-md-offset-4">
+        <!-- Zone de connexion -->
+        <div class="row">
+            <form method='post' action='personal-space.php'>
+                <h3>Connexion</h3>
+                <label for='identifier1' class="sr-only">Identifiant</label>
+                <input type='text' id='identifier1' name='identifier1' class="form-control" placeholder="Identifiant" required autofocus>
+                <label for="password1" class="sr-only">Mot de passe</label>
+                <input type="password" id="password1" name="password1" class="form-control" placeholder="Mot de passe" required>
+                <button class="btn btn-lg btn-info btn-block" type="submit">Se connecter</button>
+            </form>
+        </div>
 
-    <!-- Zone d'inscription -->
-    <div class="row">
-        <form method='post' action='#inscription'>
-            <h3>Inscription</h3>
-            <label for='identifier2' class="sr-only">Identifiant</label>
-            <input type='text' id='identifier2' class="form-control" placeholder="Identifiant" required>
-            <label for='email' class="sr-only">Adresse e-mail</label>
-            <input type='email' id='email' class="form-control" placeholder="Adresse e-mail" required>
-            <label for="password2" class="sr-only">Mot de passe</label>
-            <input type="password" id="password2" class="form-control" placeholder="Mot de passe" required>
-            <label for="password3" class="sr-only">Confirmer le mot de passe</label>
-            <input type="password" id="password3" class="form-control" placeholder="Confirmer le mot de passe" required>
-            <button class="btn btn-lg btn-info btn-block" type="submit">S'inscrire</button>
-        </form>
+        <!-- Zone d'inscription -->
+        <div class="row">
+            <form method='post' action='validate.php'>
+                <h3>Inscription</h3>
+                <label for='identifier2' class="sr-only">Identifiant</label>
+                <input type='text' id='identifier2' name='identifier2' class="form-control" placeholder="Identifiant" required>
+                <label for='email' class="sr-only">Adresse e-mail</label>
+                <input type='email' id='email' name='email' class="form-control" placeholder="Adresse e-mail" required>
+                <label for="password2" class="sr-only">Mot de passe</label>
+                <input type="password" id="password2" name="password2" class="form-control" placeholder="Mot de passe" required>
+                <label for="password3" class="sr-only">Confirmer le mot de passe</label>
+                <input type="password" id="password3" name="password3" class="form-control" placeholder="Confirmer le mot de passe" required>
+                <button class="btn btn-lg btn-info btn-block" type="submit">S'inscrire</button>
+            </form>
+        </div>
     </div>
 </div>

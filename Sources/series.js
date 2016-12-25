@@ -116,8 +116,3 @@ function loadInfos(url) {
         ul.appendTo(description);
     })
 }
-
-function loadRegister(){
-    $('#main').load('register.html');
-}
-

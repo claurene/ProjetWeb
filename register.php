@@ -2,4 +2,4 @@
 
 include 'base.html';
 
-echo "<script>loadRegister();</script>";
+echo "<script>$('#main').load('register.html');</script>";
