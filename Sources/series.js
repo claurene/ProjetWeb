@@ -116,3 +116,12 @@ function loadInfos(url) {
         ul.appendTo(description);
     })
 }
+
+/*Fonction affichant les données d'un utilisateur sur sa page personnelle*/
+function loadUser(url) {
+    $.getJSON(url, function (result) {
+        var user = result['series'];
+        $('.username').html(user[0]['name']);
+        $('.email').html(user[0]['email']);
+    });
+}

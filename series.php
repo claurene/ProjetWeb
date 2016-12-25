@@ -17,6 +17,10 @@ else if (isset($_GET["serie"])) {
 else if (isset($_GET["sort"])) {
     $SQL="SELECT * FROM series INNER JOIN (SELECT series_id FROM seriesgenres WHERE genre_id=".$_GET["sort"].") R ON series_id=id";
 }
+/*Accès aux données d'un utilisateur*/
+else if (isset($_GET["user"])) {
+    $SQL="SELECT * FROM users WHERE name='".$_GET["user"]."'";
+}
 
 /*Accès à la base de donnée, mise en place des données des séries au format JSON*/
 $bdd = new PDO('mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '');

@@ -1,5 +1,10 @@
 <!-- Structure de base pour toutes les pages du site ; à inclure dans chaque page -->
 
+<!-- Variable de session pour un affichage en fonction de si l'utilisateur est connecté ou non -->
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -40,18 +45,33 @@
         <li>
             <a href="accueil.php">Parcourir</a>
         </li>
-        <!-- Lien vers recommandations -->
-        <li>
-            <a href="#recommandations">Recommandations</a>
-        </li>
-        <!-- Lien vers connexion : à changer en deconnexion si l'utilisateur est connecté -->
-        <li>
-            <a href="register.php" id=connexion>Connexion</a>
-        </li>
-        <!-- espace "mon compte" : à faire apparaitre en JS ou PHP si l'utilisateur est connecté -->
-        <li>
-            <a href="#compte">Compte</a>
-        </li>
+
+        <?php
+            if(isset($_SESSION['username'])){
+                echo '
+                <!-- Lien vers Recommandations -->
+                 <li>
+                    <a href="#Recommandations">Recommandations</a>
+                </li>
+                <!-- Lien vers la page personnelle de l\'utilisateur -->
+                 <li>
+                    <a href="personal-space.php">Compte</a>
+                </li>
+                <!-- Deconnexion -->
+                 <li>
+                    <a href="logout.php">Deconnexion</a>
+                </li>
+                ';
+            }
+            else {
+                echo '
+                 <!-- Lien vers connexion -->
+                 <li>
+                    <a href="register.php">Connexion</a>
+                </li>
+                ';
+            }
+        ?>
     </ul>
 </div>
 

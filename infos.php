@@ -1,6 +1,6 @@
 <?php
 
-include "base.html";
+include "base.php";
 
 if (isset($_GET["serie"])) {
     $url = "series.php?serie=".$_GET["serie"];

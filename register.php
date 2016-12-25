@@ -1,5 +1,5 @@
 <?php
 
-include 'base.html';
+include 'base.php';
 
 echo "<script>$('#main').load('register.html');</script>";
