@@ -51,7 +51,7 @@
                 echo '
                 <!-- Lien vers Recommandations -->
                  <li>
-                    <a href="#Recommandations">Recommandations</a>
+                    <a href="recommandations.php">Recommandations</a>
                 </li>
                 <!-- Lien vers la page personnelle de l\'utilisateur -->
                  <li>
