@@ -15,7 +15,7 @@ if(isset($_SESSION['username'])){
     $userid=$query1->fetch();
 
     /*Création de la requête : ajout ou suppression d'un épisode visionné*/
-    if ($_GET["view"]='true'){
+    if ($_GET["view"]=='true'){
         $SQL="INSERT INTO usersepisodes (user_id, episode_id, rating) VALUES (:user, :episode, :rating)";
         $query = $bdd->prepare($SQL);
         $query->execute(array(
@@ -23,9 +23,8 @@ if(isset($_SESSION['username'])){
             'episode'=>$_GET["episode"],
             'rating'=>null, //rating null pour l'instant
         ));
-
     }
-    if ($_GET["view"]='false'){
+    elseif ($_GET["view"]=='false'){
         $SQL="DELETE FROM usersepisodes WHERE user_id=".$userid['id']." AND episode_id=".$_GET['episode'];
         $query = $bdd->exec($SQL);
     }
