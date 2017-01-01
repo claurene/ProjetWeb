@@ -105,6 +105,8 @@
 <div id="main">
     <!-- Grille des séries ; se remplie grace à un script JQuery -->
     <div id="grid" class="container-fluid col-sm-offset-2">
+        <!-- Pour afficher directement la grille sur la première page d'accueil-->
+        <?php echo "<script>loadGrid('series.php');</script>"; ?>
     </div>
 </div>
 
