@@ -1,0 +1,41 @@
+<div class="container col-sm-offset-2">
+
+    <!-- Titre de la page -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">Mes Recommandations <small class="username" id="user" text="user"><!-- username --></small>
+			
+				<div class="btn-group">
+				
+					<button type="button" class="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Recommandation par  
+						<span class="caret"> </span>
+					</button>
+					
+					<!-- Liste des themes de recommandation -->
+					<ul class="dropdown-menu scrollable-menu" id="recomm-menu">
+						<li> <a class="par" href="recommandations.php?par=createur&user=" text="createur" name="createur"> votre réalisateur préféré </a></li>					
+						<li> <a class="par" href="recommandations.php?par=genre&user=" text="genre" name="genre"> votre genre préféré </a></li>
+						<!-- on regroupe les episodes et on fait la moyenne des vues par séries  sur le nb total d'episodes-->
+						<li> <a class="par" href="recommandations.php?par=plusVues&user=" text="plusVues" text="plusVues"> le plus de vues d'épisodes des séries </a></li>
+					</ul>
+					
+				</div>
+				
+			</h1>
+		</div>
+    </div>
+	
+	<div class="row2">
+        <p> Nous vous proposons les 16 premières séries que vous pourriez adorer, groupés selon le critère <small class="thRecomm"><!-- thème de recommandation (si arrive à la fin)--></small> (par défaut, la popularité prime). </p>
+    </div>
+	
+	<div id="main">
+		<!-- Grille des séries ; se remplie grace à un script JQuery -->
+		<div id="grid" class="container-fluid col-sm-offset-2">
+		</div>
+	</div>
+
+    <!-- Informations -->
+    <div class="row">
+    </div>        
+</div>
