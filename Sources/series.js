@@ -46,10 +46,8 @@ function loadGrid(url) {
                 }).appendTo(div_serie);
 
                 //Création de la zone informations sous l'image de la série
-                //TODO: à complèter avec d'autres informations
                 div_serie.append(
-                    $('<h3/>', {text: series[j]['name']}),
-                    $('<p/>', {text: 'infos'})
+                    $('<h3/>', {text: series[j]['name']})
                 );
             }
         }
@@ -176,6 +174,24 @@ function loadEpisodes(url){
                     alt: 'poster'
                 }).appendTo(div_episode);
 
+                //paragraphe vide pour espacer avec l'image
+                $('<p/>').appendTo(div_episode);
+
+                //Création d'un bouton pour ajouter les épisodes visionnés à la base de données
+                var button = $('<button/>', {
+                    type: "button",
+                    class: "btn btn-primary",
+                    id: episodes[j]['id']
+                });
+                button.html(
+                    '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>'+" Ajouter aux épisodes visionnés"
+                );
+                /*Fonction pour ajouter un épisode vu (impossible d'en enlever via cette page pour l'instant)*/
+                button.bind('click', function() {
+                    document.location.href = "addepisodes.php?view=true&episode="+$(this).attr('id');
+                });
+                button.appendTo(div_episode);
+
                 //Création de la zone informations sous l'épisode
                 div_episode.append(
                     $('<h3/>', {text: episodes[j]['name']}),
@@ -185,5 +201,57 @@ function loadEpisodes(url){
             }
         }
 
+    });
+}
+
+function loadUsersEpisodes(url){
+    $.getJSON(url, function (result) {
+        var div = $('#episodes');
+        var episodes = result['episodes'];
+        //Boucle pour afficher les épisodes
+        for (var i = 0; i < episodes.length; i+=4) {
+            //Boucle pour les épisodes sur une ligne
+            var row = $('<div/>', {
+                class: "row"
+            });
+            row.appendTo(div);
+            for (var j = i; j < i + 4; j++) {
+                //Épisode n°j
+                var div_episode = $('<div/>', {
+                    class: "col-md-3 portfolio-item"
+                });
+                div_episode.appendTo(row);
+
+                //Création de la zone d'affichage de l'image de l'épisode
+                $('<img/>', {
+                    class: "img-responsive",
+                    src: "https://image.tmdb.org/t/p/w185" + episodes[j]['still_path'],
+                    alt: 'poster'
+                }).appendTo(div_episode);
+
+                //paragraphe vide pour espacer avec l'image
+                $('<p/>').appendTo(div_episode);
+
+                //Création d'un bouton pour supprimer un épisode vu
+                var button = $('<button/>', {
+                    type: "button",
+                    class: "btn btn-danger",
+                    id: episodes[j]['episode_id']
+                });
+                button.html(
+                    '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>'+" Supprimer"
+                );
+                /*Fonction pour supprimer un épisode vu*/
+                button.bind('click', function() {
+                    document.location.href = "addepisodes.php?view=false&episode="+$(this).attr('id');
+                });
+                button.appendTo(div_episode);
+
+                //Création de la zone informations sous l'épisode
+                div_episode.append(
+                    $('<h5/>', {text: episodes[j]['name']})
+                );
+            }
+        }
     });
 }

@@ -10,7 +10,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Structure</title>
+    <title>Projet Web</title>
     <!-- JQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
