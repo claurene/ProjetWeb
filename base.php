@@ -28,6 +28,9 @@
             max-height: 200px;
             overflow-x: hidden;
         }
+		p {
+			text-align: justify; 
+		}
     </style>
 </head>
 

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c17c96cb-c5d6-4559-9960-554e7dc14436" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommandations.html" afterPath="$PROJECT_DIR$/recommandations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommandationsRequete.php" afterPath="$PROJECT_DIR$/recommandationsRequete.php" />
     </list>
     <ignored path="ProjetWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,24 +42,25 @@
       <file leaf-file-name="recommandationsRequete.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recommandationsRequete.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+            <state relative-caret-position="376">
+              <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
               <folding>
-                <marker date="1483307186366" expanded="true" signature="291:786" ph="select * fro... series" />
-                <marker date="1483307186366" expanded="true" signature="329:780" ph="select serie... seriesgenres" />
-                <marker date="1483307186366" expanded="true" signature="381:734" ph="select genre... seriesgenres" />
-                <marker date="1483307186366" expanded="true" signature="441:726" ph="select serie... seriesseasons" />
-                <marker date="1483307186366" expanded="true" signature="506:717" ph="select seaso... seasonsepisodes" />
-                <marker date="1483307186366" expanded="true" signature="573:716" ph="select disti... usersepisodes" />
-                <marker date="1483307186366" expanded="true" signature="641:692" ph="select id fr... users" />
-                <marker date="1483307186366" expanded="true" signature="966:1473" ph="select * fro... series" />
-                <marker date="1483307186366" expanded="true" signature="1004:1467" ph="select serie... seriescreators" />
-                <marker date="1483307186366" expanded="true" signature="1058:1415" ph="select creat... seriescreators" />
-                <marker date="1483307186366" expanded="true" signature="1122:1407" ph="select serie... seriesseasons" />
-                <marker date="1483307186366" expanded="true" signature="1187:1398" ph="select seaso... seasonsepisodes" />
-                <marker date="1483307186366" expanded="true" signature="1254:1397" ph="select disti... usersepisodes" />
-                <marker date="1483307186366" expanded="true" signature="1322:1373" ph="select id fr... users" />
-                <marker date="1483307186366" expanded="true" signature="2162:2218" ph="SELECT * FRO... series" />
+                <marker date="1483364116367" expanded="true" signature="291:786" ph="select * fro... series" />
+                <marker date="1483364116367" expanded="true" signature="329:780" ph="select serie... seriesgenres" />
+                <marker date="1483364116367" expanded="true" signature="381:734" ph="select genre... seriesgenres" />
+                <marker date="1483364116367" expanded="true" signature="441:726" ph="select serie... seriesseasons" />
+                <marker date="1483364116367" expanded="true" signature="506:717" ph="select seaso... seasonsepisodes" />
+                <marker date="1483364116367" expanded="true" signature="573:716" ph="select disti... usersepisodes" />
+                <marker date="1483364116367" expanded="true" signature="641:692" ph="select id fr... users" />
+                <marker date="1483364116367" expanded="true" signature="1474:1981" ph="select * fro... series" />
+                <marker date="1483364116367" expanded="true" signature="1512:1975" ph="select serie... seriescreators" />
+                <marker date="1483364116367" expanded="true" signature="1566:1923" ph="select creat... seriescreators" />
+                <marker date="1483364116367" expanded="true" signature="1630:1915" ph="select serie... seriesseasons" />
+                <marker date="1483364116367" expanded="true" signature="1695:1906" ph="select seaso... seasonsepisodes" />
+                <marker date="1483364116367" expanded="true" signature="1762:1905" ph="select disti... usersepisodes" />
+                <marker date="1483364116367" expanded="true" signature="1830:1881" ph="select id fr... users" />
+                <marker date="1483364116367" expanded="true" signature="2750:3121" ph="SELECT * FRO... series" />
+                <marker date="1483364116367" expanded="true" signature="3587:3643" ph="SELECT * FRO... series" />
               </folding>
             </state>
           </provider>
@@ -71,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/recommandations.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,7 +79,7 @@
       <file leaf-file-name="recommandations.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommandations.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
+            <state relative-caret-position="594">
               <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
               <folding />
             </state>
@@ -177,6 +176,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -220,7 +220,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,16 +314,17 @@
       <workItem from="1481645192531" duration="5332000" />
       <workItem from="1482692009512" duration="15335000" />
       <workItem from="1482941369595" duration="2787000" />
-      <workItem from="1483275128646" duration="17553000" />
+      <workItem from="1483275128646" duration="17817000" />
+      <workItem from="1483364172278" duration="576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43637000" />
+    <option name="totallyTimeSpent" value="44477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="746" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20937042" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -368,11 +368,77 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Sources/series.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3708">
+          <caret line="206" column="31" lean-forward="false" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#loadGrid#0" expanded="false" />
+            <element signature="n#!!block;n#loadInfos#0" expanded="false" />
+            <element signature="n#!!block;n#loadUser#0" expanded="false" />
+            <element signature="n#!!block;n#loadEpisodes#0" expanded="false" />
+            <element signature="n#!!block;n#loadUsersEpisodes#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommandationsRequete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1483364116367" expanded="true" signature="291:786" ph="select * fro... series" />
+            <marker date="1483364116367" expanded="true" signature="329:780" ph="select serie... seriesgenres" />
+            <marker date="1483364116367" expanded="true" signature="381:734" ph="select genre... seriesgenres" />
+            <marker date="1483364116367" expanded="true" signature="441:726" ph="select serie... seriesseasons" />
+            <marker date="1483364116367" expanded="true" signature="506:717" ph="select seaso... seasonsepisodes" />
+            <marker date="1483364116367" expanded="true" signature="573:716" ph="select disti... usersepisodes" />
+            <marker date="1483364116367" expanded="true" signature="641:692" ph="select id fr... users" />
+            <marker date="1483364116367" expanded="true" signature="1474:1981" ph="select * fro... series" />
+            <marker date="1483364116367" expanded="true" signature="1512:1975" ph="select serie... seriescreators" />
+            <marker date="1483364116367" expanded="true" signature="1566:1923" ph="select creat... seriescreators" />
+            <marker date="1483364116367" expanded="true" signature="1630:1915" ph="select serie... seriesseasons" />
+            <marker date="1483364116367" expanded="true" signature="1695:1906" ph="select seaso... seasonsepisodes" />
+            <marker date="1483364116367" expanded="true" signature="1762:1905" ph="select disti... usersepisodes" />
+            <marker date="1483364116367" expanded="true" signature="1830:1881" ph="select id fr... users" />
+            <marker date="1483364116367" expanded="true" signature="2750:3121" ph="SELECT * FRO... series" />
+            <marker date="1483364116367" expanded="true" signature="3587:3643" ph="SELECT * FRO... series" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommandations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommandations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personal-space.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/series.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1818">
           <caret line="190" column="47" lean-forward="false" selection-start-line="190" selection-start-column="47" selection-end-line="190" selection-end-column="47" />
           <folding>
+            <element signature="n#!!block;n#loadGrid#0" expanded="false" />
             <element signature="n#!!block;n#loadInfos#0" expanded="false" />
             <element signature="n#!!block;n#loadUser#0" expanded="false" />
+            <element signature="n#!!block;n#loadEpisodes#0" expanded="false" />
+            <element signature="n#!!block;n#loadUsersEpisodes#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -445,8 +511,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#!!block;n#loadGrid#0" expanded="false" />
             <element signature="n#!!block;n#loadInfos#0" expanded="false" />
             <element signature="n#!!block;n#loadUser#0" expanded="false" />
+            <element signature="n#!!block;n#loadEpisodes#0" expanded="false" />
+            <element signature="n#!!block;n#loadUsersEpisodes#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -478,8 +547,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#!!block;n#loadGrid#0" expanded="false" />
             <element signature="n#!!block;n#loadInfos#0" expanded="false" />
             <element signature="n#!!block;n#loadUser#0" expanded="false" />
+            <element signature="n#!!block;n#loadEpisodes#0" expanded="false" />
+            <element signature="n#!!block;n#loadUsersEpisodes#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -489,8 +561,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#!!block;n#loadGrid#0" expanded="false" />
             <element signature="n#!!block;n#loadInfos#0" expanded="false" />
             <element signature="n#!!block;n#loadUser#0" expanded="false" />
+            <element signature="n#!!block;n#loadEpisodes#0" expanded="false" />
+            <element signature="n#!!block;n#loadUsersEpisodes#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -573,19 +648,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewepisodes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/viewepisodes.php" />
     <entry file="file://$PROJECT_DIR$/CSS/simple-sidebar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1694">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,7 +761,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recommandations.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
+        <state relative-caret-position="594">
           <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
           <folding />
         </state>
@@ -703,7 +770,7 @@
     <entry file="file://$PROJECT_DIR$/recommandations.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -724,24 +791,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recommandationsRequete.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        <state relative-caret-position="376">
+          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
           <folding>
-            <marker date="1483307186366" expanded="true" signature="291:786" ph="select * fro... series" />
-            <marker date="1483307186366" expanded="true" signature="329:780" ph="select serie... seriesgenres" />
-            <marker date="1483307186366" expanded="true" signature="381:734" ph="select genre... seriesgenres" />
-            <marker date="1483307186366" expanded="true" signature="441:726" ph="select serie... seriesseasons" />
-            <marker date="1483307186366" expanded="true" signature="506:717" ph="select seaso... seasonsepisodes" />
-            <marker date="1483307186366" expanded="true" signature="573:716" ph="select disti... usersepisodes" />
-            <marker date="1483307186366" expanded="true" signature="641:692" ph="select id fr... users" />
-            <marker date="1483307186366" expanded="true" signature="966:1473" ph="select * fro... series" />
-            <marker date="1483307186366" expanded="true" signature="1004:1467" ph="select serie... seriescreators" />
-            <marker date="1483307186366" expanded="true" signature="1058:1415" ph="select creat... seriescreators" />
-            <marker date="1483307186366" expanded="true" signature="1122:1407" ph="select serie... seriesseasons" />
-            <marker date="1483307186366" expanded="true" signature="1187:1398" ph="select seaso... seasonsepisodes" />
-            <marker date="1483307186366" expanded="true" signature="1254:1397" ph="select disti... usersepisodes" />
-            <marker date="1483307186366" expanded="true" signature="1322:1373" ph="select id fr... users" />
-            <marker date="1483307186366" expanded="true" signature="2162:2218" ph="SELECT * FRO... series" />
+            <marker date="1483364116367" expanded="true" signature="291:786" ph="select * fro... series" />
+            <marker date="1483364116367" expanded="true" signature="329:780" ph="select serie... seriesgenres" />
+            <marker date="1483364116367" expanded="true" signature="381:734" ph="select genre... seriesgenres" />
+            <marker date="1483364116367" expanded="true" signature="441:726" ph="select serie... seriesseasons" />
+            <marker date="1483364116367" expanded="true" signature="506:717" ph="select seaso... seasonsepisodes" />
+            <marker date="1483364116367" expanded="true" signature="573:716" ph="select disti... usersepisodes" />
+            <marker date="1483364116367" expanded="true" signature="641:692" ph="select id fr... users" />
+            <marker date="1483364116367" expanded="true" signature="1474:1981" ph="select * fro... series" />
+            <marker date="1483364116367" expanded="true" signature="1512:1975" ph="select serie... seriescreators" />
+            <marker date="1483364116367" expanded="true" signature="1566:1923" ph="select creat... seriescreators" />
+            <marker date="1483364116367" expanded="true" signature="1630:1915" ph="select serie... seriesseasons" />
+            <marker date="1483364116367" expanded="true" signature="1695:1906" ph="select seaso... seasonsepisodes" />
+            <marker date="1483364116367" expanded="true" signature="1762:1905" ph="select disti... usersepisodes" />
+            <marker date="1483364116367" expanded="true" signature="1830:1881" ph="select id fr... users" />
+            <marker date="1483364116367" expanded="true" signature="2750:3121" ph="SELECT * FRO... series" />
+            <marker date="1483364116367" expanded="true" signature="3587:3643" ph="SELECT * FRO... series" />
           </folding>
         </state>
       </provider>
