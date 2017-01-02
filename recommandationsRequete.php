@@ -18,6 +18,15 @@ if (isset($_GET["user"])){
 						)
 					)R1 on seriesgenres.genre_id=R1.genre_id
 				)";
+		/*Accès à la base de donnée, mise en place des données des séries au format JSON*/
+        	$bdd = new PDO('mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '');
+        	$query = $bdd->query($SQL);
+        	$donnees=$query->fetchAll(PDO::FETCH_ASSOC);
+        	/*On prend 16 séries aléatoires parmis celles retournées pour varier les recommandations*/
+        	shuffle($donnees);
+        	$array["series"]=array_slice($donnees, 0, 16);
+        	$JSON=json_encode($array);
+        	echo $JSON;
         }
 
         elseif($_GET["par"]=="createur"){
@@ -34,22 +43,37 @@ if (isset($_GET["user"])){
 						)
 					)R1 on seriescreators.creator_id=R1.creator_id
 				)";
+		/*Accès à la base de donnée, mise en place des données des séries au format JSON*/
+        	$bdd = new PDO('mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '');
+        	$query = $bdd->query($SQL);
+        	$donnees=$query->fetchAll(PDO::FETCH_ASSOC);
+       	 	/*On prend 16 séries aléatoires parmis celles retournées pour varier les recommandations*/
+        	shuffle($donnees);
+        	$array["series"]=array_slice($donnees, 0, 16);
+        	$JSON=json_encode($array);
+        	echo $JSON;
         }
 
         elseif($_GET["par"]=="plusVues") {
+		/* tri par les séries qui ont le plus de vues d'episodes par rapport au nombre d'episodes total dans la série  */
+		/* Element sélectionné : plusVues (le plus de vues d'episodes de séries) */
+			$SQL='SELECT * FROM 
+				((series INNER JOIN seriesseasons ON series.id=seriesseasons.series_id) 
+					INNER JOIN seasonsepisodes ON seriesseasons.season_id=seasonsepisodes.season_id) 
+						INNER JOIN usersepisodes ON seasonsepisodes.episode_id=usersepisodes.episode_id 
+						GROUP BY series.id 
+						ORDER BY count(*)/series.number_of_episodes desc 
+						
+						LIMIT 0,16';
 
-        }
-
-        /*Accès à la base de donnée, mise en place des données des séries au format JSON*/
-        $bdd = new PDO('mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '');
-        $query = $bdd->query($SQL);
-        $donnees=$query->fetchAll(PDO::FETCH_ASSOC);
-        /*On prend 16 séries aléatoires parmis celles retournées pour varier les recommandations*/
-        shuffle($donnees);
-        $array["series"]=array_slice($donnees, 0, 16);
-        $JSON=json_encode($array);
-        echo $JSON;
-
+    		/*Accès à la base de donnée, mise en place des données des séries au format JSON*/
+    		$bdd = new PDO('mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '');
+    		$query = $bdd->query($SQL);
+    		$donnees=$query->fetchAll(PDO::FETCH_ASSOC);
+    		$array["series"]=$donnees;
+    		$JSON=json_encode($array);
+    		echo $JSON;
+	}
     }
 }
 else {
